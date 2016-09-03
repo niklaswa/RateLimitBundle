@@ -120,8 +120,11 @@ noxlogic_rate_limit:
     # Optional exception class that will be returned when a client hits the rate limit
     rate_response_exception:  null
 
+    # The HTTP type to return when a client hits the rate limit
+    rate_response_type: 'application/json'
+    
     # The HTTP message to return when a client hits the rate limit
-    rate_response_message:  'You exceeded the rate limit'
+    rate_response_message:  '{"status":"error","error":{"code":429,"message":"Too Many Requests"}}'
 
     # Should the ratelimit headers be automatically added to the response?
     display_headers:      true
