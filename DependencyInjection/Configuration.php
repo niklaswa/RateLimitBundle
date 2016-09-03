@@ -62,6 +62,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('rate_response_type')
                     ->defaultValue('text/html')
                     ->info('The HTTP type to return when a client hits the rate limit')
+                ->end()
                 ->scalarNode('rate_response_message')
                     ->defaultValue('You exceeded the rate limit')
                     ->info('The HTTP message to return when a client hits the rate limit')
